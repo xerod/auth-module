@@ -393,19 +393,10 @@ function moka(nuxt, strategy) {
       authorization: "https://api.mokapos.com/oauth/authorize",
       token: "https://api.mokapos.com/oauth/token",
       userInfo: "https://api.mokapos.com/v1/profile/self",
-      logout: "https://api.mokapos.com/oauth/revoke"
+      logout: false
     },
-    token: {
-      property: "access_token",
-      type: "Bearer",
-      maxAge: 1800
-    },
-    responseType: "code",
-    grantType: "authorization_code",
-    accessType: "offline",
-    redirectUri: "http://localhost:3000/auth/callback",
-    logoutRedirectUri: "/",
-    scope: ["report", "customer", "transaction"]
+    scope: ["report", "customer", "transaction"],
+    autoLogout: true
   };
   assignDefaults(strategy, DEFAULTS);
   addAuthorize(nuxt, strategy);
