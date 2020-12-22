@@ -6,7 +6,7 @@ node_modules
 .vscode
 .DS_STORE
 coverage
-dist
+# dist
 package-lock.json
 _book
 temp
