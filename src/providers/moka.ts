@@ -19,6 +19,11 @@ export function moka(
       userInfo: 'https://api.mokapos.com/v1/profile/self',
       logout: false
     },
+    responseType: 'code',
+    grantType: 'authorization_code',
+    accessType: 'offline',
+    redirectUri: 'http://localhost:3000/auth/callback',
+    logoutRedirectUri: '/',
     scope: ['report', 'customer', 'transaction'],
     autoLogout: true
   }
