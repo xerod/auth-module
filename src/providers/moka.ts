@@ -22,8 +22,6 @@ export function moka(
     responseType: 'code',
     grantType: 'authorization_code',
     accessType: 'offline',
-    redirectUri: 'http://localhost:3000/auth/callback',
-    logoutRedirectUri: '/',
     scope: ['report', 'customer', 'transaction'],
     autoLogout: true
   }
