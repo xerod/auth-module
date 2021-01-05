@@ -22,6 +22,7 @@ export function moka(
     responseType: 'code',
     grantType: 'authorization_code',
     accessType: 'offline',
+    logoutRedirectUri: '/',
     scope: ['report', 'customer', 'transaction'],
     autoLogout: true
   }
